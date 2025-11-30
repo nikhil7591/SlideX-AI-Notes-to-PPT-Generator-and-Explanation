@@ -669,31 +669,286 @@ def main():
     # ==================== SIDEBAR ====================
     with st.sidebar:
         
+        # Theme Switcher
+        st.markdown("### 🎨 Theme")
+        theme_option = st.selectbox(
+            "Choose Theme",
+            ["Light", "Dark"],
+            index=0,
+            key="theme_selector",
+            help="Switch between light and dark themes"
+        )
+        
+        # Apply theme CSS based on selection
+        if theme_option == "Dark":
+            st.markdown("""
+            <style>
+                .stApp {
+                    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+                }
+                
+                .card {
+                    background: #2c2c2c !important;
+                    border-color: #404040 !important;
+                    color: #ffffff !important;
+                }
+                
+                .card-header {
+                    color: #ffffff !important;
+                }
+                
+                .header-container {
+                    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+                }
+                
+                .upload-container {
+                    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%) !important;
+                    border-color: #0066ff !important;
+                }
+                
+                .upload-text, .header-title, .header-subtitle {
+                    color: #ffffff !important;
+                }
+                
+                .upload-hint {
+                    color: #b0b0b0 !important;
+                }
+                
+                .stTextArea, .stSelectbox, .stSlider {
+                    background-color: #2c2c2c !important;
+                    color: #ffffff !important;
+                }
+                
+                .stButton > button {
+                    background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%) !important;
+                }
+                
+                .sidebar-section {
+                    background: #2c2c2c !important;
+                    border: 1px solid #404040 !important;
+                    border-radius: 8px !important;
+                    padding: 1rem !important;
+                    margin-bottom: 1rem !important;
+                }
+                
+                .sidebar-title {
+                    color: #ffffff !important;
+                    font-weight: 600 !important;
+                    margin-bottom: 0.5rem !important;
+                }
+                
+                .sidebar-content {
+                    color: #b0b0b0 !important;
+                }
+                
+                .stTabs [data-baseweb="tab-list"] {
+                    background-color: #2c2c2c !important;
+                }
+                
+                .stTabs [data-baseweb="tab"] {
+                    color: #b0b0b0 !important;
+                }
+                
+                .stMarkdown, .stText {
+                    color: #ffffff !important;
+                }
+                
+                .stSelectbox > div > div > select {
+                    background-color: #2c2c2c !important;
+                    color: #ffffff !important;
+                }
+                
+                .stSlider > div > div > div > div {
+                    background-color: #0066ff !important;
+                }
+                
+                /* Fix sidebar text color */
+                .sidebar-section ul, .sidebar-section li, .sidebar-section p {
+                    color: #b0b0b0 !important;
+                }
+                
+                .sidebar-section a {
+                    color: #00d4ff !important;
+                }
+                
+                /* Fix form elements */
+                .stSelectbox div[data-baseweb="select"] {
+                    background-color: #2c2c2c !important;
+                    color: #ffffff !important;
+                }
+                
+                .stSlider div[data-baseweb="slider"] {
+                    background-color: #2c2c2c !important;
+                }
+                
+                /* Fix labels */
+                .stSelectbox label, .stSlider label {
+                    color: #ffffff !important;
+                }
+                
+                /* Fix tab content */
+                .stTab {
+                    color: #ffffff !important;
+                }
+                
+                /* Fix sidebar background */
+                .st-emotion-cache-vk3wp9 {
+                    background-color: #1a1a2e !important;
+                }
+                
+                /* Additional sidebar fixes */
+                .stSidebar {
+                    background-color: #1a1a2e !important;
+                }
+                
+                .css-1d391kg {
+                    background-color: #1a1a2e !important;
+                }
+                
+                .css-1lcbmhc {
+                    background-color: #1a1a2e !important;
+                }
+                
+                /* Hide Streamlit header and footer */
+                .st-emotion-cache-zq5wmm.ezrtsby0 {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                .st-emotion-cache-1ve2ttm.ezrtsby0 {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                .st-emotion-cache-h5rgaw.ezrtsby0 {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                .st-emotion-cache-1l02zno.ezrtsby0 {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                .st-emotion-cache-1dp5vir {
+                    display: none;
+                }
+                
+                /* Additional header hiding */
+                header {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                
+                .stHeader {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                
+                /* Hide main header container */
+                .st-emotion-cache-1y4p8pa {
+                    display: none;
+                }
+                
+                .st-emotion-cache-1vq4p7l {
+                    display: none;
+                }
+            </style>
+            """, unsafe_allow_html=True)
+        else:
+            # Light theme (default) - also hide header
+            st.markdown("""
+            <style>
+                /* Hide Streamlit header and footer for light theme */
+                .st-emotion-cache-zq5wmm.ezrtsby0 {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                .st-emotion-cache-1ve2ttm.ezrtsby0 {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                .st-emotion-cache-h5rgaw.ezrtsby0 {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                .st-emotion-cache-1l02zno.ezrtsby0 {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                .st-emotion-cache-1dp5vir {
+                    display: none;
+                }
+                
+                /* Additional header hiding */
+                header {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                
+                .stHeader {
+                    visibility: hidden;
+                    height: 0px;
+                }
+                
+                /* Hide main header container */
+                .st-emotion-cache-1y4p8pa {
+                    display: none;
+                }
+                
+                .st-emotion-cache-1vq4p7l {
+                    display: none;
+                }
+            </style>
+            """, unsafe_allow_html=True)
+        
         # Quick Info
-        st.markdown('''
-        <div class="sidebar-section">
-            <div class="sidebar-title">✨ Key Features</div>
-            <ul style="margin: 0; padding-left: 1.25rem; color: var(--text-secondary); font-size: 0.9rem;">
-                <li style="margin-bottom: 0.5rem;">🧠 AI-powered content analysis</li>
-                <li style="margin-bottom: 0.5rem;">📊 Professional slide design</li>
-                <li style="margin-bottom: 0.5rem;">🔍 Intelligent explanations</li>
-                <li style="margin-bottom: 0.5rem;">📝 Presenter notes included</li>
-                <li style="margin-bottom: 0.5rem;">⚡ Instant downloads</li>
-            </ul>
-        </div>
-        ''', unsafe_allow_html=True)
+        if theme_option == "Dark":
+            st.markdown('''
+            <div class="sidebar-section">
+                <div class="sidebar-title">✨ Key Features</div>
+                <ul style="margin: 0; padding-left: 1.25rem; color: #b0b0b0; font-size: 0.9rem;">
+                    <li style="margin-bottom: 0.5rem;">🧠 AI-powered content analysis</li>
+                    <li style="margin-bottom: 0.5rem;">📊 Professional slide design</li>
+                    <li style="margin-bottom: 0.5rem;">🔍 Intelligent explanations</li>
+                    <li style="margin-bottom: 0.5rem;">📝 Presenter notes included</li>
+                    <li style="margin-bottom: 0.5rem;">⚡ Instant downloads</li>
+                </ul>
+            </div>
+            ''', unsafe_allow_html=True)
+        else:
+            st.markdown('''
+            <div class="sidebar-section">
+                <div class="sidebar-title">✨ Key Features</div>
+                <ul style="margin: 0; padding-left: 1.25rem; color: var(--text-secondary); font-size: 0.9rem;">
+                    <li style="margin-bottom: 0.5rem;">🧠 AI-powered content analysis</li>
+                    <li style="margin-bottom: 0.5rem;">📊 Professional slide design</li>
+                    <li style="margin-bottom: 0.5rem;">🔍 Intelligent explanations</li>
+                    <li style="margin-bottom: 0.5rem;">📝 Presenter notes included</li>
+                    <li style="margin-bottom: 0.5rem;">⚡ Instant downloads</li>
+                </ul>
+            </div>
+            ''', unsafe_allow_html=True)
         
         # Support & Resources
-        st.markdown('''
-        <div class="sidebar-section">
-            <div class="sidebar-title">🔗 Resources</div>
-            <div class="sidebar-content" style="font-size: 0.9rem;">
-                <p>📖 <a href="#documentation">Documentation</a></p>
-                <p>💬 <a href="https://github.com/slidex/issues" target="_blank">Report Issues</a></p>
-                <p>⭐ <a href="https://github.com/slidex" target="_blank">Star on GitHub</a></p>
+        if theme_option == "Dark":
+            st.markdown('''
+            <div class="sidebar-section">
+                <div class="sidebar-title">🔗 Resources</div>
+                <div class="sidebar-content" style="font-size: 0.9rem;">
+                    <p>📖 <a href="#documentation" style="color: #00d4ff;">Documentation</a></p>
+                    <p>💬 <a href="https://github.com/slidex/issues" target="_blank" style="color: #00d4ff;">Report Issues</a></p>
+                    <p>⭐ <a href="https://github.com/slidex" target="_blank" style="color: #00d4ff;">Star on GitHub</a></p>
+                </div>
             </div>
-        </div>
-        ''', unsafe_allow_html=True)
+            ''', unsafe_allow_html=True)
+        else:
+            st.markdown('''
+            <div class="sidebar-section">
+                <div class="sidebar-title">🔗 Resources</div>
+                <div class="sidebar-content" style="font-size: 0.9rem;">
+                    <p>📖 <a href="#documentation">Documentation</a></p>
+                    <p>💬 <a href="https://github.com/slidex/issues" target="_blank">Report Issues</a></p>
+                    <p>⭐ <a href="https://github.com/slidex" target="_blank">Star on GitHub</a></p>
+                </div>
+            </div>
+            ''', unsafe_allow_html=True)
     
     # ==================== MAIN CONTENT TABS ====================
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["📤 Upload & Generate", "📋 Preview", "🔍 Explanations", "❓ Help", "⚙️ Settings"])
