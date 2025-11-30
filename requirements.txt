@@ -1,0 +1,52 @@
+# Core Dependencies
+streamlit
+python-pptx
+langchain
+langchain-google-genai
+
+# AI Model Dependencies
+google-generativeai
+
+# Document Processing
+PyPDF2
+python-docx
+pypdf
+
+# Text Processing
+nltk
+spacy
+
+# Data Processing
+pandas
+numpy
+
+# Environment and Configuration
+python-dotenv
+pydantic
+
+# File Handling
+pillow
+python-magic
+
+# Database Configuration
+pymongo
+motor
+beanie
+
+# Utilities
+requests
+tenacity
+tqdm
+
+# Development and Testing
+pytest
+black
+flake8
+
+# Optional: For enhanced text processing
+transformers
+torch
+
+# Optional: For web scraping (if needed)
+beautifulsoup4
+selenium

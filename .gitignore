@@ -1,0 +1,158 @@
+# Environment Variables
+.env
+.env.local
+.env.production
+.env.staging
+.env.test
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+*.logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Uploads and Temporary Files
+uploads/
+temp/
+tmp/
+*.tmp
+*.temp
+cache/
+.cache/
+
+# Generated Files
+*.pptx
+*.pdf
+*.docx
+generated/
+output/
+exports/
+downloads/
+
+# Streamlit
+.streamlit/
+
+# AI Model Files
+*.pkl
+*.pickle
+*.joblib
+models/
+checkpoints/
+
+# Data Files
+data/
+dataset/
+datasets/
+*.csv
+*.json
+*.xml
+*.yaml
+*.yml
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.pytest/
+test-results/
+coverage.xml
+
+# Type Checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# Documentation Build
+docs/_build/
+site/
+
+# Package Managers
+node_modules/
+package-lock.json
+yarn.lock
+
+# Backup Files
+*.bak
+*.backup
+*~
+*.orig
+
+# Security
+*.key
+*.pem
+*.crt
+*.pfx
+secrets/
+private/
+
+# Local Configuration
+config.local.*
+settings.local.*
+local_settings.py
+
+# Performance Monitoring
+.monitoring/
+.profiling/
+*.prof
+
+# Docker
+.dockerignore
+docker-compose.override.yml
