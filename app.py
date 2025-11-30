@@ -671,6 +671,11 @@ def main():
         
         # Theme Switcher
         st.markdown("### 🎨 Theme")
+        
+        # Clear theme selector session state to ensure default
+        if 'theme_selector' not in st.session_state:
+            st.session_state.theme_selector = "Light"
+        
         theme_option = st.selectbox(
             "Choose Theme",
             ["Light", "Dark"],
