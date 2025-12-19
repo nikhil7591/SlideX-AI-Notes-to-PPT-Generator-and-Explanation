@@ -1,0 +1,106 @@
+# ==================== ENVIRONMENT ====================
+.env
+.env.local
+.env.production
+.env.*.local
+
+# ==================== PYTHON ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==================== VIRTUAL ENVIRONMENTS ====================
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==================== IDE & EDITORS ====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+# ==================== OS SPECIFIC ====================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ==================== LOGS ====================
+logs/
+*.log
+*.log.*
+
+# ==================== PROJECT SPECIFIC ====================
+uploads/
+temp/
+tmp/
+*.tmp
+generated/
+output/
+*.pptx
+*.pdf
+
+# ==================== JUPYTER NOTEBOOK ====================
+.ipynb_checkpoints
+*.ipynb
+
+# ==================== TESTING & COVERAGE ====================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ==================== TYPE CHECKING ====================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# ==================== NODE.JS (if applicable) ====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ==================== STREAMLIT ====================
+.streamlit/secrets.toml
+.streamlit/cache/
+
+# ==================== MISC ====================
+.cache/
+.Python
+.env.example.bak
+

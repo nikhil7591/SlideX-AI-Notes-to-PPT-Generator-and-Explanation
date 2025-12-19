@@ -1,0 +1,12 @@
+[server]
+fileWatcherType = "poll"
+
+[runner]
+fastReruns = true
+
+[theme]
+primaryColor = "#0066ff"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f5f7fa"
+textColor = "#1a1a2e"
+font = "sans serif"

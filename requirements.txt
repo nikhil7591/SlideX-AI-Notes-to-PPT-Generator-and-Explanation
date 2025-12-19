@@ -1,0 +1,60 @@
+# Core Dependencies
+streamlit
+python-pptx
+langchain>=0.1.0
+langchain-google-genai>=1.0.0
+langchain-text-splitters>=0.0.1
+langchain-core>=0.1.0
+pydantic>=2.0.0
+
+# AI Model Dependencies
+google-generativeai
+
+# Document Processing
+PyPDF2
+python-docx
+pypdf
+
+# Text Processing
+nltk
+spacy
+
+# Data Processing
+pandas
+numpy
+
+# Environment and Configuration
+python-dotenv
+pydantic
+
+# File Handling
+pillow
+python-magic
+
+# OCR for Image Processing
+pytesseract
+
+# Voice/Audio Processing
+SpeechRecognition
+pydub
+
+# Database Configuration
+pymongo
+motor
+beanie
+
+# Utilities
+requests
+tenacity
+tqdm
+
+# Development and Testing
+pytest
+black
+flake8
+
+
+
+# Optional: For web scraping (if needed)
+beautifulsoup4
+selenium
